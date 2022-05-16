@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		631382B628326F24005961AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631382B428326F24005961AD /* Main.storyboard */; };
+		63A43BA72832747A001273D8 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A43BA62832747A001273D8 /* SpringAnimation.swift */; };
 		63A8F368283170E700B8D8E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8F367283170E700B8D8E5 /* AppDelegate.swift */; };
 		63A8F36A283170E700B8D8E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8F369283170E700B8D8E5 /* SceneDelegate.swift */; };
 		63A8F36C283170E700B8D8E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A8F36B283170E700B8D8E5 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3AA1AF931D01B2DD9ADCE91D /* Pods_AnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		631382B528326F24005961AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63A43BA62832747A001273D8 /* SpringAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		63A8F364283170E700B8D8E5 /* AnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A8F367283170E700B8D8E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A8F369283170E700B8D8E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		631382AF28326D09005961AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63A43BA62832747A001273D8 /* SpringAnimation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				63A8F36C283170E700B8D8E5 /* ViewController.swift in Sources */,
 				63A8F368283170E700B8D8E5 /* AppDelegate.swift in Sources */,
 				63A8F36A283170E700B8D8E5 /* SceneDelegate.swift in Sources */,
+				63A43BA72832747A001273D8 /* SpringAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

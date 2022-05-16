@@ -19,35 +19,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ufo" translatesAutoresizingMaskIntoConstraints="NO" id="w87-94-83P" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="80" y="120" width="160" height="160"/>
+                                <rect key="frame" x="64" y="80" width="192" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="w87-94-83P" secondAttribute="height" multiplier="1:1" id="S4s-b1-S3W"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSZ-9Q-NXT" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="80" y="485.5" width="160" height="31"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Run"/>
-                                <connections>
-                                    <action selector="runAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cib-tz-0hY"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oT6-3C-j0k">
+                                <rect key="frame" x="64" y="425" width="192" height="91.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zN5-Of-aj1">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSZ-9Q-NXT" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="0.0" y="60.5" width="192" height="31"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Run"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="runAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cib-tz-0hY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uSZ-9Q-NXT" secondAttribute="bottom" multiplier="1.1" id="ZRw-o4-IbF"/>
-                            <constraint firstItem="uSZ-9Q-NXT" firstAttribute="width" secondItem="w87-94-83P" secondAttribute="width" id="iRL-3F-lLo"/>
-                            <constraint firstItem="uSZ-9Q-NXT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lqm-Ny-XDP"/>
-                            <constraint firstItem="w87-94-83P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="nqp-Af-Nu0"/>
-                            <constraint firstItem="w87-94-83P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="oJW-LR-V1N"/>
+                            <constraint firstItem="oT6-3C-j0k" firstAttribute="width" secondItem="w87-94-83P" secondAttribute="width" id="LG2-Mq-geU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oT6-3C-j0k" secondAttribute="bottom" multiplier="1.1" id="YPu-LP-Pfw"/>
+                            <constraint firstItem="w87-94-83P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="nqp-Af-Nu0"/>
+                            <constraint firstItem="w87-94-83P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="oJW-LR-V1N"/>
                             <constraint firstItem="w87-94-83P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r8i-m6-pmn"/>
+                            <constraint firstItem="oT6-3C-j0k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y32-Eq-6DY"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AnimationView" destination="w87-94-83P" id="Yah-gf-EIo"/>
+                        <outlet property="aboutAnimationLabel" destination="zN5-Of-aj1" id="SOD-rr-Uqd"/>
+                        <outlet property="animationImageView" destination="w87-94-83P" id="jjG-D7-hUw"/>
+                        <outlet property="runAnimationButton" destination="uSZ-9Q-NXT" id="3zh-dX-hAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,6 +80,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
